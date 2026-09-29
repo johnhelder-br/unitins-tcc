@@ -26,6 +26,9 @@
 *.xdy
 
 
+*.pdf
+
+
 .ptls.cache/
 _minted-*/
 *.acn
