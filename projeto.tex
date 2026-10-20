@@ -149,8 +149,37 @@ sob a orientação da professora Me. Tamirys Virgulino Ribeiro Prado
 % ----
 \begin{document}
 
-% Define o comando \recado{seu texto}
+% ---
+% Definição de comandos pessoais para auxiliar na produção do trabalho
+% ---
+
+% COR PERSONALIZADA:
+%    Define a cor verde escuro (#006400) para identificar visualmente 
+%    trechos novos ou alterados que aguardam validação do orientador/revisor.
+\definecolor{CorTextoNovo}{HTML}{006400}
+
+% \recado{mensagem}
+%       - Finalidade: Inserir notas, observações ou dúvidas diretas para o orientador/revisor.
+%       - Formatação: Texto pequeno, em negrito e na cor vermelha destacados entre colchetes.
+%       - Exemplo: \recado{Conferir se este cálculo está correto.}
 \newcommand{\recado}[1]{\small\textcolor{red}{\textbf{[RECADO: #1]}}}
+
+
+% \revisar{texto}
+%       - Finalidade: Destacar blocos de texto recém-escritos que ainda NÃO foram
+%                     validados pelo orientador/corretor.
+%       - Formatação: Exibe o texto em verde escuro.
+%       - Exemplo: \revisar{Esta nova metodologia foi aplicada para resolver o problema X.}
+\newcommand{\revisar}[1]{\textcolor{CorTextoNovo}{#1}}
+
+
+% \revisado{texto}
+%       - Finalidade: Marcar trechos que já foram lidos e aprovados.
+%       - Formatação: Mantém o texto no formato padrão do documento (sem cor/destaque).
+%       - Dica de fluxo: Quando o orientador aprovar o bloco de texto contido em \revisar{...},
+%                        basta trocar a palavra "revisar" por "revisado" no código.
+\newcommand{\revisado}[1]{#1}
+
 
 % Retira espaço extra obsoleto entre as frases.
 \frenchspacing 
