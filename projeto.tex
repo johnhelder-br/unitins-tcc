@@ -154,9 +154,8 @@ sob a orientação da professora Me. Tamirys Virgulino Ribeiro Prado
 % ---
 
 % COR PERSONALIZADA:
-%    Define a cor verde escuro (#006400) para identificar visualmente 
-%    trechos novos ou alterados que aguardam validação do orientador/revisor.
 \definecolor{CorTextoNovo}{HTML}{006400}
+\definecolor{CorTextoPendente}{HTML}{FFC222}
 
 % \recado{mensagem}
 %       - Finalidade: Inserir notas, observações ou dúvidas diretas para o orientador/revisor.
@@ -171,6 +170,14 @@ sob a orientação da professora Me. Tamirys Virgulino Ribeiro Prado
 %       - Formatação: Exibe o texto em verde escuro.
 %       - Exemplo: \revisar{Esta nova metodologia foi aplicada para resolver o problema X.}
 \newcommand{\revisar}[1]{\textcolor{CorTextoNovo}{#1}}
+
+
+% \revisar{texto}
+%       - Finalidade: Destacar blocos de texto recém-escritos que ainda NÃO foram
+%                     validados pelo orientador/corretor.
+%       - Formatação: Exibe o texto em verde escuro.
+%       - Exemplo: \revisar{Esta nova metodologia foi aplicada para resolver o problema X.}
+\newcommand{\revisando}[1]{\textcolor{CorTextoPendente}{#1}}
 
 
 % \revisado{texto}
